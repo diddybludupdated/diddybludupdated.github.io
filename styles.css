@@ -167,6 +167,30 @@ body::before {
     opacity: 1;
 }
 
+/* Sidebar Title */
+.sidebar-header {
+    width: 100%;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 40px;
+}
+
+.sidebar-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--trans);
+    letter-spacing: -0.5px;
+}
+
+.sidebar.expanded .sidebar-title {
+    opacity: 1;
+}
+
 /* ═══ MAIN ═══ */
 .main {
     flex: 1;
@@ -439,8 +463,9 @@ body::before {
 
 .filter-tab.active {
     background: var(--accent);
-    color: #fff;
+    color: #000;
     border-color: transparent;
+    font-weight: 700;
 }
 
 /* ═══ GAME CARDS ═══ */
@@ -525,11 +550,23 @@ body::before {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: var(--accent);
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 24px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transform: scale(0.8);
+    transition: transform var(--trans);
+}
+
+.game-card:hover .play-circle {
+    transform: scale(1);
+}
+
+.play-circle svg {
+    fill: #000;
+    width: 20px;
+    height: 20px;
 }
 
 .game-card-body {

@@ -202,7 +202,7 @@ function loadGames(filter = 'all', searchQuery = '') {
             <div class="game-card-thumb">
                 <div class="thumb-bg" style="background:${game.gradient}">${game.emoji}</div>
                 ${game.thumb ? `<img src="${game.thumb}" alt="${game.title}" loading="lazy" onerror="this.remove()">` : ''}
-                <div class="play-overlay"><div class="play-circle"><svg viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M8 5v14l11-7z"/></svg></div></div>
+                <div class="play-overlay"><div class="play-circle"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M8 5v14l11-7z"/></svg></div></div>
             </div>
             <div class="game-card-body">
                 <div class="game-card-name">${game.title}</div>
