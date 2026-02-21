@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+.env
+uv/uv.config.js
+uv/uv.bundle.js
+uv/uv.sw.js
+uv/uv.handler.js
+*.log

@@ -1,0 +1,16 @@
+{
+  "name": "unblockplay",
+  "version": "1.0.0",
+  "description": "Unblocked Games Portal with Web Proxy",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "setup": "node setup-uv.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "@titaniumnetwork-dev/ultraviolet": "^3.0.1",
+    "@twn39/bare-server-node": "^1.1.2",
+    "http-proxy": "^1.18.1"
+  }
+}
