@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <canvas id="snow"></canvas>
 
     <!-- ═══ SIDEBAR ═══ -->
     <aside class="sidebar" id="sidebar">
@@ -168,6 +169,14 @@
                             data-icon="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png">Drive</button>
                         <button class="cloak-preset-btn" id="resetCloak">Reset</button>
                     </div>
+
+                    <div class="settings-group" style="margin-top: 24px;">
+                        <label class="settings-label">Advanced Cloak</label>
+                        <button class="cloak-preset-btn" id="aboutBlankBtn"
+                            style="width: 100%; padding: 10px; font-weight: 600;">Open in about:blank</button>
+                        <p class="settings-card-desc" style="margin-top: 8px; font-size: 11px;">Hides the URL from
+                            history and extensions.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -212,6 +221,7 @@
     </div>
 
     <script src="games.js"></script>
+    <script src="snow.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -138,6 +138,32 @@ function setCloak(title, iconUrl) {
             if (iconInput) iconInput.value = i;
         });
     });
+
+    const abBtn = document.getElementById('aboutBlankBtn');
+    if (abBtn) {
+        abBtn.addEventListener('click', () => {
+            const win = window.open();
+            if (!win) {
+                alert("Please allow popups for this feature to work.");
+                return;
+            }
+            const doc = win.document;
+            const iframe = doc.createElement('iframe');
+            const style = iframe.style;
+
+            doc.title = document.title;
+            style.position = 'fixed';
+            style.top = style.bottom = style.left = style.right = 0;
+            style.border = style.outline = 'none';
+            style.width = style.height = '100%';
+
+            iframe.src = window.location.href;
+            doc.body.appendChild(iframe);
+
+            // Optional: Close original
+            window.location.replace("https://google.com");
+        });
+    }
 })();
 
 // ── Search & Filter ────────────────────────────────────
